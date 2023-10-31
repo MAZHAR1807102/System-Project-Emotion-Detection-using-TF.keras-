@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body style="background-image: url('Background.jpg');background-color: rgb(27, 178, 178); height: 600px; width: 1600px;">
+  <div>  
+    <div style="padding-top:20px; padding-left: 700px;">   
+    <h2 class='display-3' style="padding-left: 90px; padding-right: 500px; color: black; font-weight: bolder;">Select File</h2>
+    </div>
+    <div style="padding-top:20px;padding-bottom: 20px; padding-left: 200px; border: 2px solid blue; margin-left: 600px; margin-right: 500px;">   
+    <form name='frm' method='POST' action="{{url_for('predict')}}" enctype='multipart/form-data'>
+    
+    <div class="form-group">
+
+      	<div class="custom-file my-3">
+    		<input type="file" name="select_file">
+		</div>
+
+    </div>
+    
+    <input type="submit" name="btn" class='btn btn-primary'>
+  </form>
+  </div>
+  </div>
+</div> 
+    <h1 style="font-family:'Times New Roman', Times, serif;font-weight: bolder; color: rgb(11, 11, 51); padding-left: 750px;
+     padding-right: 200px; padding-top:30px; padding-bottom: 0px;">
+     Take a look</h1>
+    <div style="margin-left: 100px; padding-left: 500px; padding-right: 0px; padding-top: 50px; padding-bottom : 50px;">
+      <p></p> 
+      <img src="{{ url_for('video') }}"  width="50%" height="50%" style="border: 5px solid black;"/>
+
+    </div>
+</body>
+</html>
